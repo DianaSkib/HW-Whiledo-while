@@ -2,8 +2,10 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        /// task 1
+        int firstFriday = 5;
+        for (int a = firstFriday; a <= 31; a += 7) {
+            System.out.println("Сегодня пятница, " + a + "-e число. Необходимо подготовить отчет");
+        }
     }
 }
