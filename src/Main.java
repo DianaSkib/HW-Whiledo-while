@@ -7,5 +7,21 @@ public class Main {
         for (int a = firstFriday; a <= 31; a += 7) {
             System.out.println("Сегодня пятница, " + a + "-e число. Необходимо подготовить отчет");
         }
+        /// task 2
+        int marathonDistance = 42195;
+        int checkpointInterval = 500;
+        int distanceCovered = 0;
+
+        do {
+            int remainingDistance = marathonDistance - distanceCovered;
+            System.out.println("Держитесь! Осталось " + remainingDistance + " метров");
+            distanceCovered += checkpointInterval;
+        } while (distanceCovered < marathonDistance);
+
+
+        for (int currentDistance = 0; currentDistance < marathonDistance; currentDistance += checkpointInterval) {
+            int remainingDistance = marathonDistance - currentDistance;
+            System.out.println("Держитесь! Осталось " + remainingDistance + " метров");
+        }
     }
 }
