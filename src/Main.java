@@ -64,5 +64,25 @@ public class Main {
                 }
             }
         }
+        int charge = 20;
+        int minute = 0;
+        int overheats = 0;
+        while (charge < 100 && overheats <= 3) {
+            minute++;
+            if (minute % 10 == 0) {
+                overheats++;
+                if (overheats > 3) {
+                    System.out.println("Зарядка прекращена. Текущий заряд: " + charge + "%");
+                    break;
+                }
+                minute += 2;
+                continue;
+            }
+            charge += 2;
+            if (charge == 100) {
+                break;
+            }
+        }
+        System.out.println("Время зарядки составило " + minute + " минут.");
     }
 }
