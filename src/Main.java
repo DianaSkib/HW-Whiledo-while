@@ -24,10 +24,20 @@ public class Main {
             System.out.println("Держитесь! Осталось " + remainingDistance + " метров");
         }
         /// task 3
-        int theAmount = 600;
+        int theAmount = 800;
         int currentDay = 0;
         int costOfParking = 100;
         while (theAmount >= costOfParking) {
+            currentDay++;
+            if (currentDay % 5 == 0) {
+                continue;
+            }
+            theAmount -= costOfParking;
+        }
+        System.out.println("Количество дней: " + currentDay);
+
+
+        for (int day = 1; theAmount >= costOfParking; day++) {
             currentDay++;
             if (currentDay % 5 == 0) {
                 continue;
