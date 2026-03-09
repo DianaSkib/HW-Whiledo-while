@@ -45,5 +45,24 @@ public class Main {
             theAmount -= costOfParking;
         }
         System.out.println("Количество дней: " + currentDay);
+
+        /// task 4
+        int month = 0;
+        double total = 0;
+        int recommendedAmount = 15000;
+        double purpose = 12000000.0;
+
+        while (true) {
+            month++;
+            total += recommendedAmount;
+            if (month % 6 == 0) {
+                double interest = total * 0.07;
+                total += interest;
+                if (total >= purpose) {
+                    System.out.printf("Цель достигнута в месяце %d. Итоговая сумма: %.2f рублей\n", month, total);
+                    break;
+                }
+            }
+        }
     }
 }
